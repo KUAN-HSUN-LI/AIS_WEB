@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      dockerfile: docker/backend/Dockerfile
+      context: .
+    volumes:
+      - ${local_gpu_info_folder}:/app/server_gpu_info
+    networks:
+      - backend
+  loadbalancer:
+    build:
+      dockerfile: docker/nginx/Dockerfile
+      context: .
+    ports:
+    - "80:8000"
+    networks:
+    - backend
+
+networks:
+  backend: {}

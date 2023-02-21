@@ -1,0 +1,6 @@
+.vscode
+__pycache__/
+.ipynb_checkpoints
+*.ipynb
+.env
+server_gpu_info/
