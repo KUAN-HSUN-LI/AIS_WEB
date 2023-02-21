@@ -34,7 +34,6 @@ import { ref, defineComponent, onMounted, onBeforeUnmount } from "vue";
 import dayjs from "dayjs";
 
 const dateFilter = (val: string, format = "YYYY-MM-DD HH:mm:ss") => {
-  console.log(val, dayjs(val).format(format))
   return dayjs(val).format(format);
 };
 

@@ -4,3 +4,4 @@ __pycache__/
 *.ipynb
 .env
 server_gpu_info/
+dist/
